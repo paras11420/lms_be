@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Borrowed Confirmation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .email-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+      }
+      .highlight {
+        color: #007bff;
+        font-weight: bold;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <h2>Hi {{ username }},</h2>
+      <p>
+        You have successfully borrowed the book titled
+        <span class="highlight">{{ book_title }}</span>.
+      </p>
+      <p>
+        The due date for return is
+        <span class="highlight">{{ due_date }}</span>.
+      </p>
+      <p>
+        Please ensure that you return the book on or before the due date to
+        avoid any fines.
+      </p>
+
+      <!-- Contact Librarian Button -->
+      <a
+        href="mailto:paras11420@gmail.com?subject=Assistance%20with%20Book%20Return&body=Please%20help%20with%20my%20book%20return."
+        class="button"
+      >
+        Contact Librarian
+      </a>
+
+      <div class="footer">
+        <p>This is an automated message from the Library Management System.</p>
+      </div>
+    </div>
+  </body>
+</html>
