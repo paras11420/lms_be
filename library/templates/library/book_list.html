@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <style>
+      .not-available {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Library Book List</h1>
+
+    {% if books %}
+    <ul>
+      {% for book in books %}
+      <li>
+        <strong>{{ book.title }}</strong> by {{ book.author }} – {% if
+        book.available %}
+        <span class="available">Available</span>
+        {% else %}
+        <span class="not-available">Not Available</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No books available.</p>
+    {% endif %}
+  </body>
+</html>
